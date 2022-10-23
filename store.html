@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="styles.css" rel="stylesheet" type="text/css"/>
+      <link href="https://fonts.cdnfonts.com/css/booter" rel="stylesheet">
+    <script src="script.js" async></script>
+    <title>Teddy Swims | STORE</title>
+  </head>
+    <body>
+       <header class="main-header">
+          <nav class="main-nav nav">
+             <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="store.html">STORE</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+             </ul>
+          </nav>
+        <h1 class="band-name band-name-large">Teddy Swims</h1>
+       </header>
+      
+       <section class="content-section container">
+           <h2 class="section-header">MUSIC</h2>
+             <div class="shop-items">
+               <div class="shop-item">
+                  <span class="shop-item-title">Album 1</span>
+                     <img class="shop-item-image" src="images/Teddy_Album1.jpg" alt="spiral-image">
+                     <div class="shop-item-details">
+                     <span class="shop-item-price">$12.99</span>
+                  <button class="btn btn-primary shop-item-button" role="button">ADD TO CART</button>
+                </div>
+              </div>
+           <div class="shop-item">
+                 <span class="shop-item-title">Album 2</span>
+                      <img class="shop-item-image" src="images/Album2.jpg">
+                     <div class="shop-item-details">
+                     <span class="shop-item-price">$14.99</span>
+                  <button class="btn btn-primary shop-item-button" role="button">ADD TO CART</button>
+               </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Album 3</span>
+                      <img class="shop-item-image" src="images/Album3.JPG" alt="red-clouds-image" >
+                     <div class="shop-item-details">
+                    <span class="shop-item-price">$17.99</span>
+                  <button class="btn btn-primary shop-item-button" role="button">ADD TO CART</button>
+               </div>
+              </div>
+              <div class="shop-item">
+                  <span class="shop-item-title">Album 4</span>
+                       <img class="shop-item-image" src="images/Roxie_Album4.JPG" alt="lion-image">
+                       <div class="shop-item-details">
+                      <span class="shop-item-price">$22.99</span>
+                    <button class="btn btn-primary shop-item-button" role="button">ADD TO CART</button>
+                  </div>
+              </div>
+          </div>
+       </section>
+      
+       <section class="content-section container">
+           <h2 class="section-header">MERCH</h2>
+              <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">T-Shirts</span>
+                    <img class="shop-item-image" src="images/Argue_Tshirt_free.JPG" alt="shirt-image">
+                   <div class="shop-item-details">
+                  <span class="shop-item-price">$24.99</span>
+                <button class="btn btn-primary shop-item-button" role="button">ADD TO CART</button>
+              </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Coffee Mugs</span>
+                    <img class="shop-item-image" src="images/Coffe_Cup.jpg" alt="cup-image">
+                    <div class="shop-item-details">
+                  <span class="shop-item-price">$19.99</span>
+                <button class="btn btn-primary shop-item-button" role="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+      </section>
+      
+      <section class="container content-section">
+           <h2 class="section-header">CART</h2>
+               <div class="cart-row">
+                  <span class="cart-item cart-header cart-column">ITEM</span>
+                  <span class="cart-price cart-header cart-column">PRICE</span>
+                  <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+               </div>
+               <div class="cart-items">   <!--This wraps cart into cart items container so we can style last child border bottom to a single solid line, without affecting the rest of the cart-row styles. There's a problem with the cart item first div, I have removed the element and the cart price does not update till an item is added, but I cannot seem to add items to the cart if I remove the cart-row div below??--> 
+                  <div class="cart-row">
+                    <div class="cart-item cart-column">
+                      <img class="cart-item-image" src="images/SBMALHS_images.jpg" alt="album-cover-image" width="75">
+                      <span class="cart-item-title">Album</span>
+                    </div>
+                        <span class="cart-price cart-column">$12.99</span>
+                      <div class="cart-quantity cart-column">
+                          <input class="cart-quantity-input" type="number" value="1">
+                           <button class="btn btn-danger" type="button">REMOVE</button>
+                        </div>
+                      </div>
+                     </div>  
+                     <div class="cart-total">
+                          <strong class="cart-total-title">Total</strong>
+                          <span class="cart-total-price">$0</span>
+                      </div>
+                    <div>
+                      <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                   </div>
+               </section>
+                <footer class="main-footer">
+                    <div class="container main-footer-container">
+                        <h3 class="band-name">Teddy Swims</h3>
+                          <ul class="nav footer-nav">
+                            <li>
+                               <a href="https://www.youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/187/187210.png" alt="youtube-icon" width="25"></a>
+                               </li>
+                               <li>
+                                <a href="https://www.spotify.com" target="_blank"><img src="" alt="" width="25"></a></li>
+                               <li>
+                                <a href="https://www.facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/128/145/145802.png" alt="facebook-icon" width="25"></a>
+                            </li>
+                        </ul>
+                    </div>  
+                </footer>              
+            </body>
+        </html>

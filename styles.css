@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url("https://fonts.cdnfonts.com/css/booter");
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+/*below is how to import a font into the code. the format tells the browser which font to use.*/                
+@font-face {
+  font-family: "Booter - Zero Zero";
+  src: url("Fonts/Booter - Zero Zero.woff")  format("woff"), url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;  /*this will set the size of the box and the content taking into account the inherent padding already inside the box, there is no need to add padding to this, it's inside the box.*/
+  font-family: Raleway; 
+  color: #777; /*this color is easier on the eyes to read*/
+}
+
+html, body {
+  margin: 0;     /*These styles are to get rid of the white space around the image on the document.*/
+  padding: 0;
+}
+
+.nav ul {
+  margin: 0;    /*use nav element with nav class and ul, so all ul's don't get 0 margin, only the ul in the nav element will be zero margin.had to add this because we still had a white space on top of the image box.*/
+}
+
+.nav li {
+  display: inline; /*this changes the nav elements to inline instead of the default column look*/
+}
+
+.nav a {
+  display: inline-block;    /*must change display to this for these elements, because inline only display does not allow for padding on top or bottom of the render.*/
+  padding: 0.5em;    /*this will seperate our nav items*/
+  color: white;
+  text-decoration: none;
+}
+
+.main-nav {
+  text-align: center;
+  font-size: 1.1em; /*makes font about 10% larger*/
+  font-weight: lighter;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.main-nav li {
+  color: white; 
+  padding: 0 5%; /*this gives spacing between nav items*/
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, .3);
+}     /*This gives the nav items a light grey highlight when hovered over*/
+
+.main-header {
+  background-color: rgba(0, 0, 0, .6); /* black with a 60% transparency.*/
+  background-image: url("images/SBMALHS_images.jpg");
+  background-blend-mode: multiply; /*This blends the color and image, because by default only one of the styles can be used. It makes it possible to fade the background image. */
+  background-size: cover; /*The cover style below makes the image stretch to fit either height or width and then it stops, it will hit max height of the box first, then the width*/
+  padding-bottom: 50px; /*This style will push the image down to give the title more room to breath.*/
+}
+
+.band-name {
+  text-align: center;
+  margin: 0;
+  font-size: 4em;
+  font-family: 'Booter - Zero Zero'; /*I noticed on work browsers the booter font does not display, it defaults to my secondary */
+  font-weight: normal; /*this replaces the 'bold default' of the font in an h1 element*/
+  color: white;
+}
+
+.band-name-large {
+  font-size: 9em;  /*makes the h1 title larger*/
+}
+
+.content-section {
+  margin: 1em;      /*This will keep the content from squishing up against the sides of the viewport.*/
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;       /*This will make the text always center due to the auto attribute making l & r margins exactly the same.*/
+  padding: 0 1.5em;
+}
+
+.section-header {
+  font-family: 'Metal Mania';
+  font-weight: normal; /*resets the default bold value to normal weight*/
+  color: #333;
+  text-align: center;
+  font-size: 2.5em; /*makes font 2.5 x bigger than it was*/
+}
+
+.about-band-image {
+  float: left;         /*This property will make the text float around the image smoothly, by moving the image all the way to the left.*/
+  height: 200px;       /*resize the image, as it is very large by default*/
+  width: 200px; 
+  margin: 15px;        /*This margin is to push the text from the side of the pic.*/
+  border-radius: 50%;
+}
+
+.main-footer {
+  background-color: #56CCF2;
+  color: white;
+  padding: .25em 0;
+}
+
+.main-footer-container {
+  display: flex;             /*This makes our elements stack next to each other.*/
+  align-items: center;       /*This centers elements with each other vertically in the flexbox.*/
+}
+
+.main-footer-container ul {
+  flex-grow: 1;           /*This makes our left element smaller and our right ones take up more space.*/
+  text-align: end;
+}
+
+.footer-nav li {
+  padding: 0 .5em;        /*This will give a bit of space between our li elements.*/
+}
+
+.footer-nav img {
+  width: 30px;
+  height: 30px;
+}
+
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: .67em;     /*This will style top,bot,lef, and right. */
+  cursor: pointer;    /*This makes cursor into pointer on hover.*/
+}
+
+.btn-header {
+  margin: .5em 15% 2em 15%;
+  color: white;
+  border: 2px solid #2D9CDB;
+  background-color: rgba(255, 255, 255, .1);   /*This makes button appear opaque.*/
+  border-radius: 0;
+  font-size: 1.5em;
+  font-weight: lighter;
+  padding-left: 2em;
+  padding-right: 2em;      /*these will make equal padding on both sides of text in button.*/
+}
+
+.btn-header:hover {
+  background-color: rgba(255, 255, 255, .3);/*We made this container div so the button will stay in it's place and not make the page look like shit, hence this styling.*/
+}
+
+.btn-play {
+  display: block; /*This is because buttons cannot have margins, so it must be changed to block element.*/
+  margin: 0 auto;  /*this will center the button and give equal margins on left and rightsides.*/
+  color: #2D9CDB;
+  font-size: 4em;
+  border-radius: 50%;
+  padding: 0;        /*this is to remove the button padding to reduce it's size.*/
+  width: 100px;
+  height: 100px;     /*This is to resize the button so it isn't crowded.*/
+}
+
+.tour-row {
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;             /*this gives space between row and border bottom.*/
+  margin-bottom: 1em;              /*this will give space between content and row below.*/
+}
+
+.tour-row:last-child {
+  border-bottom: none;        /*This is to remove the bottom border of last element*/
+}
+
+.tour-item {
+  display: inline-block;      /*This is so we can style the element, can't set width to a block element.*/
+  padding-right: .5em;        /*this puts space after date.*/
+}
+
+/* We changed all our strong tags for date elements because it is meant for emphasis and we don't want to do that here, we want to thicken and make it bolder, so we will change the <strong> to <span> so we can do more styling. */
+
+.tour-date {
+  color: #555;             /*colors the date a bit darker.*/
+  font-weight: bold;         /*this is to make date bolder.*/
+  width: 11%;
+}
+
+.tour-city {
+  width: 24%;           /*spacing for text*/
+}
+
+.tour-arena {
+  width: 42%;          /*this is because it's our largest text element.*/
+}
+
+.tour-btn {
+  max-width: 19%  /*Max-width is to keep the btn from growing with the screen size. notice that the % does not add up to 100%, that is because inline-block elements come with spacing we cannot remove, so taking about 1% off from each element will help compensate for this issue.*/
+}
+
+.btn-primary {
+  color: white;
+  background-color: #56CCF2;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #2D9CDB;
+  }
+
+.shop-item {
+  margin: 30px;
+  }
+
+.shop-item-title {
+    display: block; /*makes it on it's own line instead of on top of the image for responsiveness*/
+    width: 100%;  /*this will make the text center algin on img when text-align property is used.*/
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+.shop-item-image {
+    height: 250px;
+  }
+
+.shop-item-details {
+    display: flex;   /*this is used to manuever vertically, the details in a way that is centered with image bottom.*/
+    align-items: center; /*this aligns items horizontally*/
+    padding: 5px;  /*this gives even pad around whole detail text with the pic.*/
+  }
+
+.shop-item-price {
+    flex-grow: 1;  /*this pushes button all the way to end of box*/
+    color: #333;
+  }
+
+.shop-items {
+  display: flex; /*this makes all items bump to one line, so we need to use flex:wrap*/
+  flex-wrap: wrap;
+  justify-content: space-around; /*this puts even space around all elements in the div.*/
+}
+
+.cart-header {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black; /*here is an issue with the cart border repeating.*/
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cart-row {
+  display: flex; /*Flex box works best here using 100%, because block elements do not have spacing between them, as inline block elements do, so deducting 1% off the width is best practice with those elements as we styled above for the tour item sections.*/
+}
+
+.cart-item {
+  width: 45%;
+}
+
+.cart-price {
+  width: 20%;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-item-title {
+  color: #333;
+  margin-left: .5em; /*This will move title away from img*/
+  font-size: 1.2em;
+}
+
+.cart-item-image {
+  width: 45%;    /*Here we are making the image a bit smaller for asthetics*/
+  height: auto;  /*We have to set height to auto to get aspect ratio proper.*/
+  border-radius: 10px; /*This is to round the image corners, just because!*/
+}
+
+.btn-danger {
+  color: white;
+  background-color: #EB5757;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+  height: 34px; /*This is to make input box same height as remove button*/
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #56CCF2;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center; /*aligns input number to center of input box, it has up/down arrows on hover.*/
+  font-size: 1.2em;
+  margin-right: 25px; /*this seperates input box from button*/
+}
+
+/*here we have had to create a div element around the cart row in order to use last child selector to style the bottom border from a dashed line to a solid bottom border. There's a problem with the last child selector here. Somehow the selector styles the t-shirt bottom margin as well, is this an HTML div placement issue?*/
+.cart-row:last-child {
+   border-bottom: 1px solid black; 
+}
+
+.cart-row:last-child .cart-column  {
+  border: none;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+  }
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em;
+}
+
+.btn-purchase {
+  display: block;  /*This is so we can style our own margins, as inline elements are a pain.*/
+  margin: 40px auto 80px auto;
+  font-size: 1.75em;
+}
